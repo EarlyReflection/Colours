@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var colourView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+        
+        colourView.layer.cornerRadius = 10
+        
+        
+            
+        }
 }
+
+
+
 
