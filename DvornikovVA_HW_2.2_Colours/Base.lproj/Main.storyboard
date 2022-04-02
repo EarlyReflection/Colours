@@ -17,18 +17,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" tag="3" contentMode="scaleAspectFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="CiK-eQ-D4Q" userLabel="Main Stack View">
-                                <rect key="frame" x="7.3333333333333428" y="64" width="360.33333333333326" height="568.33333333333337"/>
+                                <rect key="frame" x="18.666666666666657" y="64" width="337.66666666666674" height="568.33333333333337"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Colours" translatesAutoresizingMaskIntoConstraints="NO" id="M43-8d-Fs8">
-                                        <rect key="frame" x="0.0" y="0.0" width="360.33333333333331" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="337.66666666666669" height="80"/>
                                     </imageView>
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="A9M-DF-LZp" userLabel="colourView">
-                                        <rect key="frame" x="0.0" y="113" width="360.33333333333331" height="262.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="113" width="337.66666666666669" height="262.33333333333331"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="lVb-bf-IQt" userLabel="Controls Stack View">
-                                        <rect key="frame" x="0.0" y="408.33333333333331" width="360.33333333333331" height="159.99999999999994"/>
+                                        <rect key="frame" x="0.0" y="408.33333333333331" width="337.66666666666669" height="159.99999999999994"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="dN7-8T-0bI" userLabel="Label Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="160"/>
@@ -83,10 +83,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="vbx-N1-cnw" userLabel="Sliders Stack View">
-                                                <rect key="frame" x="79" y="0.0" width="281.33333333333331" height="160"/>
+                                                <rect key="frame" x="79" y="0.0" width="258.66666666666669" height="160"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="igJ-Px-kap" userLabel="redSlider">
-                                                        <rect key="frame" x="-2" y="0.0" width="285.33333333333331" height="31"/>
+                                                        <rect key="frame" x="-2" y="0.0" width="262.66666666666669" height="31"/>
                                                         <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
                                                         <color key="maximumTrackTintColor" systemColor="systemGrayColor"/>
                                                         <connections>
@@ -94,7 +94,7 @@
                                                         </connections>
                                                     </slider>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="c92-v2-b6y" userLabel="greenSlider">
-                                                        <rect key="frame" x="-2" y="65.000000000000057" width="285.33333333333331" height="31"/>
+                                                        <rect key="frame" x="-2" y="65.000000000000057" width="262.66666666666669" height="31"/>
                                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                                         <color key="maximumTrackTintColor" systemColor="systemGrayColor"/>
                                                         <connections>
@@ -102,7 +102,7 @@
                                                         </connections>
                                                     </slider>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xLU-Bm-XuS" userLabel="blue Slider">
-                                                        <rect key="frame" x="-2" y="130.00000000000006" width="285.33333333333331" height="31"/>
+                                                        <rect key="frame" x="-2" y="130.00000000000006" width="262.66666666666669" height="31"/>
                                                         <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                                         <color key="maximumTrackTintColor" systemColor="systemGrayColor"/>
                                                         <connections>
@@ -119,7 +119,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CiK-eQ-D4Q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.960889" id="0zG-kq-Wap"/>
+                            <constraint firstItem="CiK-eQ-D4Q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="0zG-kq-Wap"/>
                             <constraint firstItem="CiK-eQ-D4Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="73q-9u-rbx"/>
                             <constraint firstItem="CiK-eQ-D4Q" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="C0r-L6-c4q"/>
                             <constraint firstItem="CiK-eQ-D4Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lf3-iJ-lhC"/>
