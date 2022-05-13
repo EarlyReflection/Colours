@@ -19,6 +19,11 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenValueLabel: UILabel!
     @IBOutlet var blueValueLabel: UILabel!
     
+    @IBOutlet var redValueTF: UITextField!
+    @IBOutlet var greenValueTF: UITextField!
+    @IBOutlet var blueValueTF: UITextField!
+    
+    
     var colourOfSettingsVC: UIColor!
     var delegate: SettingsViewControllerDelegate!
     
@@ -28,9 +33,10 @@ class SettingsViewController: UIViewController {
         colorView.layer.cornerRadius = 10
         setSlider()
         setColor()
-       
-        
         setValue(for: redValueLabel, greenValueLabel, blueValueLabel)
+        redValueTF.delegate = self
+        greenValueTF.delegate = self
+        blueValueTF.delegate = self
     }
     
     @IBAction func sliderAddingRed() {
@@ -75,18 +81,58 @@ class SettingsViewController: UIViewController {
             switch label {
             case redValueLabel:
                 redValueLabel.text = string(from: redSlider)
+                redValueTF.text = string(from: redSlider)
             case greenValueLabel:
                 greenValueLabel.text = string(from: greenSlider)
+                greenValueTF.text = string(from: greenSlider)
             default:
                 blueValueLabel.text = string(from: blueSlider)
+                blueValueTF.text = string(from: blueSlider)
             }
         }
-    
     }
     
     private func string(from slider: UISlider) -> String {
         String(format:"%0.2f", slider.value)
     }
+    
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
+}
+
+extension SettingsViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let colorValue = Float(textField.text ?? "0"),
+              colorValue >= 0 && colorValue <= 1
+        else {
+            showAlert(with: "Incorrect value!", and: "Enter a decimal number from 0 to 1")
+            return false
+        }
+        switch textField {
+        case redValueTF:
+            redSlider.setValue(colorValue, animated: true)
+            setColor()
+        case greenValueTF:
+            greenSlider.setValue(colorValue, animated: true)
+            setColor()
+        default:
+            blueSlider.setValue(colorValue, animated: true)
+            setColor()
+        }
+        
+        return true
+    }
+    
 }
 
 
