@@ -13,19 +13,15 @@ protocol SettingsViewControllerDelegate {
 
 class StartViewController: UIViewController {
     
-    @IBOutlet var backgroundView: UIView!
-    
-    var colourOfStartVC: UIColor!
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVS = segue.destination as? SettingsViewController else { return }
-        settingsVS.colourOfSettingsVC = backgroundView.backgroundColor
+        settingsVS.colourOfSettingsVC = view.backgroundColor
         settingsVS.delegate = self
     }
 }
 
 extension StartViewController: SettingsViewControllerDelegate {
     func setNewColor(from color: UIColor) {
-        backgroundView.backgroundColor = color
+        view.backgroundColor = color
     }
 }
